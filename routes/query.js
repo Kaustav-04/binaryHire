@@ -5,13 +5,14 @@ const { query } = require('express')
 const router = express.Router()
 router.use(bodyParser.json())
 
-router.use('/freelancer', (req, res, next)=>{
+router.use('/freelancerquery', (req, res)=>{
     Freelancer.findOne({name: "Soham Chakraborty" }, function (err, docs) {
         if (err){
-            console.log(err)
+            res.send(err)
         }
         else{
             console.log("Result : ", docs);
+            res.json({"Result": docs})  
         }
     });
 })

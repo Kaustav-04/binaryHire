@@ -1,14 +1,20 @@
 const express = require('express')
-const homepage= require('./routes/home')
-const user= require('./routes/user')
-const query= require('./routes/query')
+
 const mongoose = require('mongoose')
 
 const app = express()
 const port = 3000
 
+const homepage= require('./routes/home')
 app.use(homepage)
+
+const user= require('./routes/user')
 app.use(user)
+
+const projects= require('./routes/projects')
+app.use(projects)
+
+const query= require('./routes/query')
 app.use(query)
 
 mongoose.set("strictQuery", false)

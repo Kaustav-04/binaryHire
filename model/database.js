@@ -3,6 +3,12 @@ const express= require("express")
 
 const schema= mongoose.Schema
 
+const projectschildrenSchema= new schema({
+    projectname: String,
+    projectdesc: String,
+    skills: 
+})
+
 const freelancerSchema= new schema({
     name: {
         type: String,
