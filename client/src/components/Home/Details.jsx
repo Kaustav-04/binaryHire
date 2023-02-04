@@ -17,13 +17,15 @@ const Details = () => {
         <img className="w-full h-full" src={Image} alt="Details" />
       </div>
       <div className="w-1/2">
-        <h2 className="text-7xl font-semibold mb-10">Post today, hire tomorrow</h2>
-        <p className="text-3xl font-normal mb-8">
-          We've got you covered from idea to delivery. Post your job and you'll
-          start getting proposals. Once you've found your expert, you can talk
-          timings, availability, and prices before going ahead.
+        <h2 className="text-7xl font-semibold mb-10">
+          Post It. Crowd-Source It.
+        </h2>
+        <p className="text-3xl font-normal mb-8 w-3/5">
+          The crowd is always . . . you never know! Crowd-Source Your Business.
         </p>
-        <Button className='text-2xl px-4' style={{'border-radius':'23px'}}>Post a Project</Button>
+        <Button className="text-2xl px-4" style={{ "border-radius": "23px" }}>
+          Post a Project
+        </Button>
       </div>
     </div>
   );

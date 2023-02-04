@@ -25,7 +25,7 @@ const PostProject = () => {
           <h2 className="text-[#8155FF] text-4xl mb-5">
             Tell us about your project
           </h2>
-          <form className="bg-[#ffffff] rounded-2xl shadow-lg py-5 shadow-gray-500 w-full text-2xl overflow-hidden overflow-y-scroll" onSubmit={handleSubmit}>
+          <form className="bg-[#ffffff] rounded-2xl shadow-lg py-5 shadow-gray-500 w-full text-2xl overflow-hidden overflow-y-scroll no-scrollbar" onSubmit={handleSubmit}>
             <div className="w-full px-4 flex flex-col my-9">
               <label htmlFor="name">Choose a name for your project</label>
               <input
@@ -84,7 +84,7 @@ const PostProject = () => {
               <label htmlFor="upload">Images for the Project</label>
               <input value={values.upload}
                 onChange={handleChange}
-                onBlur={handleBlur} multiple className="hidden" type="file" name="upload" id="upload" />
+                onBlur={handleBlur} multiple={true} webkitdirectory={'true'} mozdirectory={'true'} directory={'true'} className="hidden" type="file" name="upload" id="upload" />
               <div
                 onClick={(e) => e.target.previousElementSibling.click()}
                 className="border border-dashed border-black text-center w-full py-5 text-3xl mt-3"
