@@ -6,7 +6,7 @@ const { query, request } = require('express')
 const router2 = express.Router()
 router2.use(bodyParser.json())
 
-
+//comment
 router2.post('/newproject', (req, res)=>{
     const projectdetails= req.body.projectetails
     const email= req.body.email
