@@ -6,7 +6,8 @@ const router3 = express.Router()
 router3.use(bodyParser.json())
 
 router3.use('/freelancerquery', (req, res)=>{
-    Freelancer.findOne({name: "Soham Chakraborty" }, function (err, docs) {
+    const email= req.body.json
+    Freelancer.findOne({email: email }, function (err, docs) {
         if (err){
             res.send(err)
         }

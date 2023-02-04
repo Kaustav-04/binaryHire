@@ -8,17 +8,26 @@ router2.use(bodyParser.json())
 
 
 router2.post('/newproject', (req, res)=>{
-    const projectname= req.body.projectname
-    const projectdesc= req.body.projectdesc
-    const skills= req.body.skills
-    const rate = req.body.rate
-    const projectData= new Projects({projectname:projectname, projectdesc:projectdesc, skills:skills, rate:rate })
+    const projectdetails= req.body.projectetails
+    const email= req.body.email
+    const projectData= new Projects({projectdetails: projectdetails, email: email})
     projectData.save().then(request=>{
         console.log("Uploaded Successfully")
     }).catch(err=>{
         console.log(err)
     })
 })  
+
+router2.get('/allprojects', (req, res)=>{
+    Projects.find({}, (err, docs)=>{
+        if(err){
+            res.send(err)
+        }
+        else{
+            res.json({'AllProjects': docs})
+        }
+    })
+})
 
 
 module.exports = router2

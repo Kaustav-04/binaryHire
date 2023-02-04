@@ -4,19 +4,11 @@ const express= require("express")
 const schema= mongoose.Schema
 
 const projectSchema= new schema({
-    projectname: {
+    projectdetails: {
         type: String,
         require: true
     },
-    projectdesc: {
-        type: String,
-        require: true
-    },
-    rate: {
-        type: String,
-        require: true
-    },
-    skills:{
+    email:{
         type: String,
         require: true
     },
