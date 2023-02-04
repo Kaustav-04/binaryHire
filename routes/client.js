@@ -6,10 +6,7 @@ const { query, request } = require('express')
 const router = express.Router()
 router.use(bodyParser.json())
 
-router.get('/clientsignup', (req, res, next)=>{
-    res.sendFile(path.join(__dirname,'../','public','clientsignup.html'))
-    
-})
+
 
 router.post('/clientsignup', (req, res)=>{
     const name= req.body.name
@@ -25,10 +22,7 @@ router.post('/clientsignup', (req, res)=>{
     })
 })
 
-router.get('/clientlogin', (req, res, next)=>{
-    res.sendFile(path.join(__dirname,'../','public','clientlogin.html'))
-    
-})
+
 
 router.post('/clientlogin', (req, res)=>{
     const email = req.body.email
