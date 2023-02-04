@@ -11,7 +11,7 @@
 
 -----
 
-### 🤷🏻‍♀️  Why GeekyBuild?
+## 🤷🏻‍♀️  Why GeekyBuild?
 
 <b>For Freelancer :</b>
 - We provide a secure Workspace - plagiarism free. All your works are hoarded in your Portfolio as NFTs.
@@ -27,3 +27,23 @@
 - Crowdsourcing platforms bring together freelancers with a wide range of skills and expertise, providing clients with access to a larger pool of talent.
 - Freelancers can offer their services on a project-by-project basis, providing clients with a flexible solution for their needs.
 - With more options available, clients can select the best freelancer for their project, resulting in improved quality and increased satisfaction.
+
+## 📈 Flowchart :
+
+<img src="Flowchart.jpg" align="center" width=1000 height=540>
+
+## 🧑🏻‍💻 Tech Stack :
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/appwrite/appwrite-original.svg" width=30 height=30/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width=30 height=30/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-plain.svg" width=30 height=30/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" width=30 height=30/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width=30 height=30/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width=30 height=30/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width=30 height=30/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" width=30 height=30/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width=30 height=30/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width=30 height=30/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width=30 height=30/>
+          
+                    
+          
