@@ -1,50 +1,50 @@
 const express= require('express')
 const bodyParser = require('body-parser')
-const Freelancer= require('../model/database')
+const Client= require('../model/client')
 const path= require('path')
 const { query, request } = require('express')
 const router = express.Router()
 router.use(bodyParser.json())
 
-router.get('/freelancersignup', (req, res, next)=>{
-    res.sendFile(path.join(__dirname,'../','public','freelancer.html'))
+router.get('/clientsignup', (req, res, next)=>{
+    res.sendFile(path.join(__dirname,'../','public','clientsignup.html'))
     
 })
 
-router.post('/freelancersignup', (req, res)=>{
+router.post('/clientsignup', (req, res)=>{
     const name= req.body.name
     const email= req.body.email
     const phone= req.body.phone
     const password = req.body.password
     const skills= req.body.skills
-    const freelancerData= new Freelancer({name:name,email:email, phone:phone, password:password, skills:skills})
-    freelancerData.save().then(request=>{
+    const clientData= new Client({name:name,email:email, phone:phone, password:password, skills:skills})
+    clientData.save().then(request=>{
         console.log("Uploaded Successfully")
     }).catch(err=>{
         console.log(err)
     })
 })
 
-router.get('/freelancerlogin', (req, res, next)=>{
-    res.sendFile(path.join(__dirname,'../','public','freelancerlogin.html'))
+router.get('/clientlogin', (req, res, next)=>{
+    res.sendFile(path.join(__dirname,'../','public','clientlogin.html'))
     
 })
 
-router.post('/freelancerlogin', (req, res)=>{
+router.post('/clientlogin', (req, res)=>{
     const email = req.body.email
     const password = req.body. password
-    Freelancer.findOne({email:email}, function(err, docs){
+    Client.findOne({email:email}, function(err, docs){
         if(err){
             res.send(err)
         }
         else{
             const pass= docs.password
             if(pass==password){
-                res.json({"Auth": true, "Person": "Freelancer"})
+                res.json({"Auth": true, "Person": "Client"})
                 console.log(true)
             }
             else{
-                res.json({"Auth": false, "Person": "Freelancer"})
+                res.json({"Auth": false, "Person": "Client"})
                 console.log(false)
             }
         }

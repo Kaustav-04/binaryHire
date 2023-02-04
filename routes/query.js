@@ -2,10 +2,10 @@ const express= require('express')
 const bodyParser = require('body-parser')
 const Freelancer= require('../model/database')
 const { query } = require('express')
-const router = express.Router()
-router.use(bodyParser.json())
+const router3 = express.Router()
+router3.use(bodyParser.json())
 
-router.use('/freelancerquery', (req, res)=>{
+router3.use('/freelancerquery', (req, res)=>{
     Freelancer.findOne({name: "Soham Chakraborty" }, function (err, docs) {
         if (err){
             res.send(err)
@@ -17,4 +17,18 @@ router.use('/freelancerquery', (req, res)=>{
     });
 })
 
-module.exports= router
+router3.post('/freelancerprojectlist', (req, res)=>{
+    const email= req.body.name
+    const projectnamelist = req.body.projectnamelist
+    Freelancer.findOne({email: email}, function (err, docs) {
+        if (err){
+            res.send(err)
+        }
+        else{
+            docs.projects.push({projectnamelist:projectnamelist})
+            res.json({"Result": docs}) 
+        }
+    });
+})
+
+module.exports= router3
