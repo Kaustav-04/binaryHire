@@ -17,6 +17,9 @@ app.use(projects)
 const query= require('./routes/query')
 app.use(query)
 
+const clientauth= require('./routes/client')
+app.use(clientauth)
+
 mongoose.set("strictQuery", false)
 mongoose.connect('mongodb+srv://Koffee:KoffeeKoders%4015_16@cluster0.jss4yda.mongodb.net/binaryHire').then(
   result=>{

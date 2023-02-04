@@ -7,7 +7,7 @@ const projectschildrenSchema= new schema({
     project: String
 })
 
-const freelancerSchema= new schema({
+const clientSchema= new schema({
     name: {
         type: String,
         require: true
@@ -36,4 +36,4 @@ const freelancerSchema= new schema({
 }
 )
 
-module.exports= mongoose.model('Freelancers', freelancerSchema)
+module.exports= mongoose.model('Client', clientSchema)
