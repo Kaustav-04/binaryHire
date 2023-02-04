@@ -24,7 +24,7 @@ router.post('/freelancersignup', (req, res)=>{
 
 router.post('/freelancerlogin', (req, res)=>{
     const email = req.body.email
-    const password = req.body. password
+    const password = req.body.password
     Freelancer.findOne({email:email}, function(err, docs){
         if(err){
             res.send(err)
