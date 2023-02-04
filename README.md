@@ -1,4 +1,4 @@
-<h1 align="center">BinaryHire</h1>
+<h1 align="center">GeekyBuild</h1>
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Soham-Chakraborty-8455/binaryHire?style=normal)
 ![Lines of code](https://img.shields.io/tokei/lines/github/Soham-Chakraborty-8455/binaryHire?color=red&label=Lines%20of%20Code)
@@ -10,5 +10,19 @@
 
 -----
 
-### Why?
+### 🤷🏻‍♀️  Why GeekyBuild?
 
+<b>For Freelancer :</b>
+- We provide a secure Workspace - plagiarism free. All your works are hoarded in your Portfolio as NFTs.
+- Beginner? But have the skills? We will give you the genuine exposure you deserve. Grow with the opportunities with provide you with.
+- Make your project stand out and get Paid.
+- Contribute to projects of any Company and your Portfolio will showcase your authentic works.
+- Use of P2P payment on blockchain handled by Smart Contracts which allows freelancers to automatically receive the payment once their work gets accepted by the project client.
+- With increased competition among varied freelancers, fair prices will be fixed.
+
+<b>For Client :</b>
+- Get your job done at a fair price.
+- Choose the best work from the plethora of submissions by the freelancers.
+- Crowdsourcing platforms bring together freelancers with a wide range of skills and expertise, providing clients with access to a larger pool of talent.
+- Freelancers can offer their services on a project-by-project basis, providing clients with a flexible solution for their needs.
+- With more options available, clients can select the best freelancer for their project, resulting in improved quality and increased satisfaction.
