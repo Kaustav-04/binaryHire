@@ -6,10 +6,6 @@ const { query, request } = require('express')
 const router2 = express.Router()
 router2.use(bodyParser.json())
 
-router2.get('/newproject', (req, res, next)=>{
-    res.sendFile(path.join(__dirname,'../','public','project.html'))
-    
-})
 
 router2.post('/newproject', (req, res)=>{
     const projectname= req.body.projectname
