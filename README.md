@@ -27,10 +27,6 @@
 - Freelancers can offer their services on a project-by-project basis, providing clients with a flexible solution for their needs.
 - With more options available, clients can select the best freelancer for their project, resulting in improved quality and increased satisfaction.
 
-## 📈 Flowchart :
-
-<img src="Flowchart.jpg" align="center" width=1000 height=540>
-
 ## 🧑🏻‍💻 Tech Stack :
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/appwrite/appwrite-original.svg" width=30 height=30/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width=30 height=30/>
@@ -43,6 +39,12 @@
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width=30 height=30/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width=30 height=30/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width=30 height=30/>
+
+## 📈 Flowchart :
+
+<img src="Flowchart.jpg" align="center" width=1000 height=540>
+
+
           
                     
           
