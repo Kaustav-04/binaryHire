@@ -16,8 +16,10 @@ router.post('/freelancersignup', (req, res)=>{
     const freelancerData= new Freelancer({name:name,email:email, phone:phone, password:password, skills:skills})
     freelancerData.save().then(request=>{
         console.log("Uploaded Successfully")
+        res.json({"Auth": true})
     }).catch(err=>{
         console.log(err)
+        res.json({"Auth": false})
     })
 })
 

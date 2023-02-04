@@ -17,8 +17,10 @@ router.post('/clientsignup', (req, res)=>{
     const clientData= new Client({name:name,email:email, phone:phone, password:password, skills:skills})
     clientData.save().then(request=>{
         console.log("Uploaded Successfully")
+        res.json({"Auth": true})
     }).catch(err=>{
         console.log(err)
+        res.json({"Auth": false})
     })
 })
 
