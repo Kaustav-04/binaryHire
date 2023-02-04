@@ -19,7 +19,7 @@ const Navigation = () => {
             <Route path='/:type/auth' element={<Authorize />} />
             {Auth && <Route path='/allprojects' element={<AllProjects />} />}
             {Auth && <Route path='/dashboard' element={<Dashboard />} />}
-            {Auth && <Route path='/postproject' element={<PostProject />} />}
+            <Route path='/postproject' element={<PostProject />} />
         </Routes>
     </Fragment>
   )
