@@ -1,10 +1,10 @@
 const express = require('express')
-
+const cors = require('cors')
 const mongoose = require('mongoose')
 
 const app = express()
 const port = 3000
-
+app.use(cors())
 const homepage= require('./routes/home')
 app.use(homepage)
 
