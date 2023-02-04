@@ -5,7 +5,7 @@ const schema= mongoose.Schema
 
 const projectSchema= new schema({
     projectdetails: {
-        type: String,
+        type: schema.Types.Mixed,
         require: true
     },
     email:{
