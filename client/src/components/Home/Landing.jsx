@@ -16,10 +16,10 @@ const Landing = () => {
             to Freelancing.
           </h2>
           <div className="flex">
-            <Link to="/auth">
+            <Link to="freelancer/auth">
               <Button className="text-3xl mr-6">Log In as Freelancer</Button>
             </Link>
-            <Link to="/auth">
+            <Link to="client/auth">
               <Button className="text-3xl">Log In as Assignor</Button>
             </Link>
           </div>

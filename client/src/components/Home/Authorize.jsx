@@ -1,11 +1,17 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Button from "../UI/Button";
 import { useFormik } from "formik";
-import { Navigate } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
+import { faBorderStyle } from "@fortawesome/free-solid-svg-icons";
+import { loginSchema, signupSchema } from "../../Schema";
+import { useDispatch } from "react-redux";
+import { authActions } from "../../store";
 
 const Authorize = () => {
+  const { type } = useParams();
   const [isSignup, setSignup] = useState(true);
-  const [signed, setSigned] = useState(false)
+  const [signed, setSigned] = useState(false);
+  const dispatch = useDispatch();
   const initialValues = {
     name: "",
     email: "",
@@ -13,33 +19,77 @@ const Authorize = () => {
     skills: "",
     password: "",
   };
-  const { values, errors, handleSubmit, handleBlur, handleChange } = useFormik({
+  const { values, errors,touched, handleSubmit, handleBlur, handleChange } = useFormik({
     initialValues,
+    validationSchema: isSignup ? signupSchema : loginSchema,
     onSubmit: (values, action) => {
-      isSignup ? signupHandler() : loginHandler();
+      authHandler();
       action.resetForm();
-      setSigned(true)
     },
   });
-  const loginHandler = () => {
-    console.log("LogIn");
-    console.log(values);
+  const authHandler = () => {
+    if (type === "client" && isSignup) {
+      sessionStorage.setItem('url',"https://binaryhirebackend.onrender.com/clientsignup")
+      sessionStorage.setItem('body',JSON.stringify({
+        name: values.name,
+        email: values.email,
+        phone: values.number,
+        password: values.password,
+        skills: values.skills,
+      }));
+    } else if (type === "client" && !isSignup) {
+      sessionStorage.setItem('url',"https://binaryhirebackend.onrender.com/clientlogin")
+      sessionStorage.setItem('body',JSON.stringify({
+        email: values.email,
+        password: values.password,
+      }));
+    } else if (type === "freelancer" && isSignup) {
+      sessionStorage.setItem('url',"https://binaryhirebackend.onrender.com/freelancersignup")
+      sessionStorage.setItem('body',JSON.stringify({
+        name: values.name,
+        email: values.email,
+        phone: values.number,
+        password: values.password,
+        skills: values.skills,
+      }));
+    } else if (type === "freelancer" && !isSignup) {
+      sessionStorage.setItem('url',"https://binaryhirebackend.onrender.com/freelancerlogin")
+      sessionStorage.setItem('body',JSON.stringify({
+        email: values.email,
+        password: values.password,
+      }));
+    }
+    backend();
   };
-  const signupHandler = () => {
-    console.log("SignUp");
-    console.log(values);
+
+  const backend = async () => {
+    const url = sessionStorage.getItem('url')
+    const body = sessionStorage.getItem('body')
+    const Response = await fetch(url, {
+      method: "POST",
+      body: body,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const data = await Response.json();
+    if(data.Auth){
+      dispatch(authActions.login())
+      setSigned(true)
+    }
+    sessionStorage.removeItem('url')
+    sessionStorage.removeItem('body')
   };
-  if(signed){
-    return <Navigate to='/allprojects' />
+  if (signed) {
+    return <Navigate to="/allprojects" />;
   }
   return (
-    <div
-      className="w-screen h-screen flex items-center justify-center overflow-hidden"
-    >
+    <div className="w-screen h-screen flex items-center justify-center overflow-hidden">
       <div
         style={{
           background:
-            "conic-gradient(from 118.04deg at 50% 50%, #CFDBFF50 0deg, rgba(194, 210, 255, 0) 360deg)"
+            "conic-gradient(from 118.04deg at 50% 50%, #CFDBFF50 0deg, rgba(194, 210, 255, 0) 360deg)",
         }}
         className="w-screen h-screen absolute top-0 left-0 -z-30"
       ></div>
@@ -52,7 +102,8 @@ const Authorize = () => {
         </h2>
         <div className="w-full h-auto overflow-hidden overflow-y-auto no-scrollbar px-3">
           {isSignup && (
-            <input
+            <Fragment>
+              <input
               className="mb-6 text-2xl p-4 rounded-2xl focus:border-none focus:outline-none w-full shadow-lg shadow-gray-500"
               type="text"
               name="name"
@@ -61,6 +112,8 @@ const Authorize = () => {
               onChange={handleChange}
               onBlur={handleBlur}
             />
+            {touched.name && errors.name && <p className="text-red-600 text-xl w-full text-center mb-3" >{errors.name}</p>}
+            </Fragment>
           )}
           <input
             className="mb-6 text-2xl p-4 rounded-2xl focus:border-none focus:outline-none w-full shadow-lg shadow-gray-500"
@@ -71,6 +124,7 @@ const Authorize = () => {
             onChange={handleChange}
             onBlur={handleBlur}
           />
+          {touched.email && errors.email && <p className="text-red-600 text-xl w-full text-center mb-3" >{errors.email}</p>}
           {isSignup && (
             <Fragment>
               <input
@@ -82,6 +136,7 @@ const Authorize = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
+              {touched.number && errors.number && <p className="text-red-600 text-xl w-full text-center mb-3" >{errors.number}</p>}
               <textarea
                 rows="5"
                 className="mb-6 text-2xl p-4 rounded-2xl focus:border-none focus:outline-none w-full shadow-lg shadow-gray-500"
@@ -91,6 +146,7 @@ const Authorize = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
+              {touched.skills && errors.skills && <p className="text-red-600 text-xl w-full text-center mb-3" >{errors.skills}</p>}
             </Fragment>
           )}
           <input
@@ -102,6 +158,7 @@ const Authorize = () => {
             onChange={handleChange}
             onBlur={handleBlur}
           />
+          {touched.password && errors.password && <p className="text-red-600 text-xl w-full text-center mb-3" >{errors.password}</p>}
         </div>
         <Button className="text-2xl mt-4" type="sumbit">
           {isSignup ? "Join BinnaryHire" : "Log In"}
