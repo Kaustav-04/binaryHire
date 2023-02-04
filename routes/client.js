@@ -1,12 +1,12 @@
 const express= require('express')
+const cors = require('cors')
 const bodyParser = require('body-parser')
 const Client= require('../model/client')
 const path= require('path')
 const { query, request } = require('express')
 const router = express.Router()
 router.use(bodyParser.json())
-
-
+router.use(cors())
 
 router.post('/clientsignup', (req, res)=>{
     const name= req.body.name

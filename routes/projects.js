@@ -1,10 +1,12 @@
 const express= require('express')
+const cors = require('cors')
 const bodyParser = require('body-parser')
 const Projects= require('../model/projectdb')
 const path= require('path')
 const { query, request } = require('express')
 const router2 = express.Router()
 router2.use(bodyParser.json())
+router2.use(cors())
 
 //comment
 router2.post('/newproject', (req, res)=>{
