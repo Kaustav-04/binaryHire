@@ -8,7 +8,7 @@ router2.use(bodyParser.json())
 
 //comment
 router2.post('/newproject', (req, res)=>{
-    const projectdetails= req.body.projectdetails
+    const projectdetails= req.body.projectetails
     const email= req.body.email
     const projectData= new Projects({projectdetails: projectdetails, email: email})
     projectData.save().then(request=>{

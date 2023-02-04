@@ -21,12 +21,13 @@ const PostProject = () => {
       },
     });
   const backend = async () => {
+    console.log('sending')
     const Response = await fetch(
       "https://binaryhirebackend.onrender.com/newproject",
       {
         method: "POST",
         body: JSON.stringify({
-          projectdetails: {
+          projectetails: {
             pname: values.name,
             sdesc: values.sdesc,
             ldesc: values.ldesc,
@@ -38,11 +39,13 @@ const PostProject = () => {
         }),
         headers: {
           "Content-Type": "application/json",
+          'Access-Control-Allow-Origin': 'http://localhost:3000'
         },
       }
     );
 
     const data = await Response.json();
+    console.log('sent')
     console.log(data)
   };
   return (
