@@ -36,6 +36,8 @@
 
 ⋗ Devpost - https://devpost.com/software/geekybuild
 
+⋗ Peerlist - https://peerlist.io/prithasaha2722/project/geekybuild
+
 <br>
 
 ## 💻 Tech Stack :
