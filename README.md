@@ -14,7 +14,7 @@
 
 <b>For Freelancer :</b>
 - We provide a secure platform - plagiarism free. All your works are hoarded in your Portfolio as NFTs.
-- Beginner? But have the skills? We will give you the genuine exposure you deserve. Grow with the opportunities with provide you with.
+- Beginner? But have the skills? We will give you the genuine exposure you deserve. Grow with the opportunities we provide you with.
 - Make your project stand out and get Paid.
 - Contribute to projects of any Company and your Portfolio will showcase your authentic works.
 - Use of P2P payment on blockchain handled by Smart Contracts which allows freelancers to automatically receive the payment once their work gets accepted by the project client.
