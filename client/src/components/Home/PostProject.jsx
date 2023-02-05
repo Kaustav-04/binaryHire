@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../images/PostProject.png";
 import Button from "../UI/Button";
 
@@ -13,6 +13,7 @@ const PostProject = () => {
     date: "",
     upload: "",
   };
+  const [image, setImage] = useState(null)
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues,
@@ -22,6 +23,9 @@ const PostProject = () => {
     });
   const backend = async () => {
     console.log('sending')
+    const formdata =  new FormData();
+    formdata.append('images', image)
+    console.log(formdata)
     const Response = await fetch(
       "https://binaryhirebackend.onrender.com/newproject",
       {
@@ -48,6 +52,9 @@ const PostProject = () => {
     console.log('sent')
     console.log(data)
   };
+  const zipHandler = () => {
+
+  }
   return (
     <div
       style={{
@@ -149,11 +156,11 @@ const PostProject = () => {
                 />
               </div>
             </div>
+            <div className="flex w-full">
             <div className="w-full px-4 flex flex-col my-9">
-              <label htmlFor="upload">Images for the Project</label>
               <input
                 value={values.upload}
-                onChange={handleChange}
+                onChange={(e) => setImage(e.target.files)}
                 onBlur={handleBlur}
                 multiple={true}
                 webkitdirectory={"true"}
@@ -168,8 +175,30 @@ const PostProject = () => {
                 onClick={(e) => e.target.previousElementSibling.click()}
                 className="border border-dashed border-black text-center w-full py-5 text-3xl mt-3"
               >
-                Click to add Images
+                Click to Zip files
               </div>
+            </div>
+            <div className="w-full px-4 flex flex-col my-9">
+              <input
+                value={values.upload}
+                onChange={zipHandler}
+                onBlur={handleBlur}
+                multiple={true}
+                webkitdirectory={"true"}
+                mozdirectory={"true"}
+                directory={"true"}
+                className="hidden"
+                type="file"
+                name="upload"
+                id="upload"
+              />
+              <div
+                onClick={(e) => e.target.previousElementSibling.click()}
+                className="border border-dashed border-black text-center w-full py-5 text-3xl mt-3"
+              >
+                Click upload the zipped files
+              </div>
+            </div>
             </div>
             <div className="w-full flex items-center justify-center">
               <Button type="submit">Post the Project</Button>

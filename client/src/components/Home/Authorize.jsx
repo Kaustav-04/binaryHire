@@ -70,6 +70,7 @@ const Authorize = () => {
       body: body,
       headers: {
         "Content-Type": "application/json",
+        'Access-Control-Allow-Origin': 'http://localhost:3000'
       },
     });
 
@@ -161,7 +162,7 @@ const Authorize = () => {
           {touched.password && errors.password && <p className="text-red-600 text-xl w-full text-center mb-3" >{errors.password}</p>}
         </div>
         <Button className="text-2xl mt-4" type="sumbit">
-          {isSignup ? "Join BinnaryHire" : "Log In"}
+          {isSignup ? "Join GeekyBuild" : "Log In"}
         </Button>
         <p className="mt-8 text-xl font-medium">
           {isSignup ? "Already having an Accoun?" : "New Here?"}{" "}
