@@ -17,35 +17,22 @@ const Content = (props) => {
     }
   return (
     <div style={{height: 'calc(100% - 60px)'}} className="px-4 w-full overflow-hidden no-scrollbar overflow-y-auto pb-4">
-      <h2 className="text-5xl font-semibold mb-2">Portfolio website</h2>
-      <div className="flex text-gray-500 text-xl mb-5">
-        <span className="mr-5">Fixed Price</span>
-        <span>Posted on 29th Jan</span>
-      </div>
-      <div className="flex text-2xl text-gray-700 mb-5">
+      <h2 className="text-5xl font-semibold mb-2">{props.name}</h2>
+      <div className="flex text-2xl text-gray-700 my-5">
         <div className="flex flex-col mr-5">
-          <span>$10000</span>
+          <span>${props.rate}</span>
           <span className="font-semibold">Fixed Price</span>
         </div>
         <div className="flex flex-col">
-          <span>1st Feburary</span>
+          <span>{props.date}</span>
           <span className="font-semibold">Completion Date</span>
         </div>
       </div>
       <div className="text-2xl my-5">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam ullam
-        quibusdam reiciendis reprehenderit iusto similique maiores molestias
-        totam non quasi est harum explicabo asperiores distinctio, doloremque
-        magnam eum in nihil, dignissimos aspernatur odio debitis nam amet.
-        Eveniet eius a non! At odio qui optio ipsum tempore odit dignissimos
-        necessitatibus in id sunt expedita obcaecati neque, delectus, itaque,
-        error quibusdam ratione laborum veritatis! Distinctio ea totam sint.
-        Temporibus harum dignissimos fugit?
-
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quidem, reiciendis quaerat earum aliquid voluptate est et quis commodi? Labore, obcaecati! Tempore provident reiciendis eveniet, voluptate placeat error laudantium quisquam deleniti dolorum voluptatem, ab unde porro, aliquam omnis possimus saepe ullam. Temporibus doloremque sapiente voluptate cumque. Reiciendis itaque, nesciunt non deleniti voluptatem ipsum, repellat necessitatibus nostrum adipisci, placeat recusandae est ad eveniet veritatis minus vitae distinctio quas perferendis! Esse nesciunt dicta architecto quidem fuga, perspiciatis eveniet rem molestias maxime autem sapiente, ipsa impedit sunt. Accusamus alias fugiat tempore nemo iste, deleniti saepe cupiditate porro itaque temporibus. Dolores assumenda quia natus.
+        {props.ldesc}
       </div>
       <div className="w-full  flex flex-wrap">
-        {skills.map((i) => (
+        {props.skills.map((i) => (
           <div className="mr-3 bg-[#4F70C7] px-3 py-1 text-white rounded-2xl text-xl">
             {i}
           </div>
