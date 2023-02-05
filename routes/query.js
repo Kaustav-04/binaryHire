@@ -1,9 +1,11 @@
 const express= require('express')
+const cors = require('cors')
 const bodyParser = require('body-parser')
 const Freelancer= require('../model/database')
 const { query } = require('express')
 const router3 = express.Router()
 router3.use(bodyParser.json())
+router3.use(cors())
 
 router3.use('/freelancerquery', (req, res)=>{
     const email= req.body.json

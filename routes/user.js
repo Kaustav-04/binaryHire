@@ -1,11 +1,12 @@
 const express= require('express')
+const cors = require('cors')
 const bodyParser = require('body-parser')
 const Freelancer= require('../model/database')
 const path= require('path')
 const { query, request } = require('express')
 const router = express.Router()
 router.use(bodyParser.json())
-
+router.use(cors())
 
 router.post('/freelancersignup', (req, res)=>{
     const name= req.body.name
@@ -16,8 +17,10 @@ router.post('/freelancersignup', (req, res)=>{
     const freelancerData= new Freelancer({name:name,email:email, phone:phone, password:password, skills:skills})
     freelancerData.save().then(request=>{
         console.log("Uploaded Successfully")
+        res.json({"Auth": true})
     }).catch(err=>{
         console.log(err)
+        res.json({"Auth": false})
     })
 })
 
