@@ -29,12 +29,14 @@
 
 <br>
 
-## 🔗 Links :
+## 📌 Links :
 ⋗ Render -  https://geekybuild.onrender.com
 
 ⋗ Presentation - https://drive.google.com/file/d/1xkQJhufYZhNdIoFiPv-Lr6UNuhMcTTNb/view?usp=sharing
 
 ⋗ Devpost - https://devpost.com/software/geekybuild
+
+⋗ Peerlist - https://peerlist.io/prithasaha2722/project/geekybuild
 
 <br>
 
