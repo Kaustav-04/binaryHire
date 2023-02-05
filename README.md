@@ -29,6 +29,15 @@
 
 <br>
 
+## 🔗 Links :
+⋗ Render -  https://geekybuild.onrender.com
+
+⋗ Presentation - https://drive.google.com/file/d/1xkQJhufYZhNdIoFiPv-Lr6UNuhMcTTNb/view?usp=sharing
+
+⋗ Devpost - https://devpost.com/software/geekybuild
+
+<br>
+
 ## 💻 Tech Stack :
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/appwrite/appwrite-original.svg" width=30 height=30/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width=30 height=30/>
