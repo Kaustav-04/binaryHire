@@ -50,7 +50,7 @@
 
 <br>
 
-## 〽︎ UI Designs :
+## 🪄 UI Designs :
 
 <img src="p1.png" width=500 height=290>  <img src="p2.png" width=500 height=290>
 <img src="p4.png" width=500 height=290>  <img src="p5.png" width=500 height=290>
