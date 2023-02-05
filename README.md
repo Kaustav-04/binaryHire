@@ -13,7 +13,7 @@
 ## 🤷🏻‍♀️  Why GeekyBuild?
 
 <b>For Freelancer :</b>
-- We provide a secure Workspace - plagiarism free. All your works are hoarded in your Portfolio as NFTs.
+- We provide a secure Workspace - plagiarism free. All your works are hoarded in your Portfolio as NFTs, which they can further sell to other clients in future.
 - Beginner? But have the skills? We will give you the genuine exposure you deserve. Grow with the opportunities with provide you with.
 - Make your project stand out and get Paid.
 - Contribute to projects of any Company and your Portfolio will showcase your authentic works.
